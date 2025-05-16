@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список фильмов</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Мой список фильмов</h1>
+
+    <div id="admin-login">
+      <button onclick="showAdminLogin()">Войти как админ</button>
+      <div id="password-section" style="display: none; margin-top: 10px;">
+        <input type="password" id="admin-password" placeholder="Введите пароль">
+        <button onclick="loginAsAdmin()">Войти</button>
+      </div>
+    </div>
+
+    <div class="input-section" id="admin-controls" style="display: none;">
+      <input type="text" id="movie-title" placeholder="Введите название фильма">
+      <button onclick="addToUnwatched()">Добавить в не просмотренные</button>
+      <button onclick="addToWatched()">Добавить в просмотренные</button>
+    </div>
+    
+    <div class="movie-lists">
+      <div class="watched-list">
+        <h2>Просмотренные фильмы</h2>
+        <div id="watched" class="movie-tiles"></div>
+      </div>
+
+      <div class="unwatched-list">
+        <h2>Не просмотренные фильмы</h2>
+        <div id="unwatched" class="movie-tiles"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
